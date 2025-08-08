@@ -1,6 +1,5 @@
 # Financial News Broadcaster
-A simple C++ application that fetches financial news and broadcasts it to connected clients in real-time.
-Files
+A C++ application that fetches financial news and broadcasts it to connected clients in real-time.
 
 ## Dependencies
 build-essential
@@ -31,3 +30,4 @@ g++ -o client client.cpp -pthread
 ```
 
 The server runs on port 54000 and broadcasts news updates every 10 seconds to all connected clients.
+
