@@ -5,7 +5,7 @@
 #include <vector>
 #include <string>
 
-const std::string apiKey = "d26fj7pr01qvraiq4ntgd26fj7pr01qvraiq4nu0";
+const std::string apiKey = "YOUR API KEY HERE";
 
 struct NewsItem{
   std::string headline;
@@ -22,19 +22,16 @@ std::string serializeNewsItem(const NewsItem& item){
 
 std::vector<std::string> getNews(const std::string& apiKey){
   std::vector<std::string> items;
-  std::string url = "https://finnhub.io/api/v1/news?category=general&token=" + apiKey;
-
+  std::string url = "https://finnhub.io/api/v1/news?token=" + apiKey;
 
 
   auto response = cpr::Get(cpr::Url{url});
   std::cout << "HTTP status: " << response.status_code << std::endl;
 
-
   //Testing code for json
-  //std::ofstream out("news_raw.json");
-  //out << response.text;
-  //out.close();
-
+ // std::ofstream out("news_raw.json");
+ // out << response.text;
+ // out.close();
 
   if (response.status_code != 200) {
     std::cerr << "Failed to fetch news" << std::endl;
