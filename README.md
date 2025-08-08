@@ -29,5 +29,13 @@ g++ -o client client.cpp -pthread
 ./client
 ```
 
+## Future enhancments
+
+- Add a GUI either web based or Qt
+- News filtering by ticker
+- User authentification
+
+
 The server runs on port 54000 and broadcasts news updates every 10 seconds to all connected clients.
+
 
